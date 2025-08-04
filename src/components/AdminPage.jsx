@@ -3,7 +3,7 @@ import { PencilIcon, TrashIcon, PlusIcon, ArrowLeftIcon } from "@heroicons/react
 
 export default function AdminPage() {
   const [testList, setTestList] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [isModalOpen, setModalOpen] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [currentTest, setCurrentTest] = useState({});
@@ -19,11 +19,11 @@ export default function AdminPage() {
       })
       .then((data) => {
         setTestList(data); // data should be an array of test objects
-        setLoading(false);
+        // setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching tests:", error);
-        setLoading(false);
+        // setLoading(false);
       });
   }, []);
 
